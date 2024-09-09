@@ -1,0 +1,212 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* 
+body { -ms-overflow-style: none;}
+body::-webkit-scrollbar { display:none }
+*/ 
+
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.section {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: -0.5rem;
+    box-sizing: border-box;
+    background-color: white;
+    position: relative;
+}
+
+
+.section-group--horizontal-right {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.section-group--horizontal-right > .section,
+.section-group--horizontal-left > .section {
+    width: 1920px;
+    flex-shrink: 0;
+    height: 100vh;
+}
+
+.section-group--horizontal-left {
+    display: flex;
+}
+.section-group--vertical-up > .section--1 {
+    width: 1920px;
+    height: 1007px;
+    background-image: url(../assets/img/s13.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-group--vertical-up > .section--2 {
+    width: 1920px;
+    height: 746px;
+    background-image: url(../assets/img/s14.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-group--vertical-up > .section--3 {
+    width: 1920px;
+    height: 1260px;
+    background-image: url(../assets/img/s15.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-group--vertical-up > .section--4 {
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../assets/img/s1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-group--vertical-up > .section--5 {
+    width: 1920px;
+    height: 653px;
+    background-image: url(../assets/img/s2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-group--vertical-up > .section--6 {
+    width: 1920px;
+    height: 986px;
+    background-image: url(../assets/img/s3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-group--vertical-up > .section--7 {
+    width: 1920px;
+    height: 903px;
+    background-image: url(../assets/img/s4.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-group--vertical-up > .section--8 {
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../assets/img/s5.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-group--vertical-up > .section--9 {
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../assets/img/s6.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-group--vertical-up > .section--10 {
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../assets/img/s7.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-group--vertical-up > .section--11 {
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../assets/img/s8.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-group--vertical-up > .section--12 {
+    width: 1920px;
+    height: 2964px;
+    background-image: url(../assets/img/s9.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-group--vertical-up > .section--13 {
+    width: 1920px;
+    height: 1050px;
+    background-image: url(../assets/img/s10-1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.section-group--vertical-up > .section--13 .img_box {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: start;
+    position: absolute;
+    left: 15.3%;
+    top: 35%;
+}
+.section-group--vertical-up > .section--13 .img_box a {
+    margin: 0 14px;
+}
+
+
+
+/*수정*/
+
+.section-group--horizontal-left {
+    display: flex;
+    flex-direction: row;
+    overflow-x: none; /* 가로 스크롤을 허용하되 스크롤바는 표시되지 않음 */
+    overflow-y: hidden; /* 세로 스크롤 방지 */
+    width: 100vw; /* 전체 뷰포트 너비 */
+    height: 100vh; /* 전체 뷰포트 높이 */
+    white-space: nowrap; /* 자식 요소를 한 줄로 유지 */
+}
+
+/* 스크롤바 스타일링 */
+.section-group--horizontal-left::-webkit-scrollbar {
+    display: none; /* 스크롤바 숨기기 */
+}
+
+
+/* .section-group--horizontal-left > .section */
+.section-group--horizontal-left > .section {
+    width: 1920px; /* 이미지의 원본 가로 크기 */
+    height: 1080px; /* 이미지의 원본 세로 크기 */
+    flex-shrink: 0; /* 크기 조정 방지 */
+}
+
+
+.section-group--horizontal-left > .section--14 {
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../assets/img/s11.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-group--horizontal-left > .section--15 {
+    width: 9761px;
+    height: 1080px;
+    background-image: url(../assets/img/s16-2.png);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+
+
+

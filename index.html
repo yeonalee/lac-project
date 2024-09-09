@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>루미포폴</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <section class="section-group section-group--1 section-group--vertical-up">
+        <section class="section section--1"></section>
+        <section class="section section--2"></section>
+        <section class="section section--3"></section>
+        <section class="section section--4"></section>
+        <section class="section section--5"></section>
+        <section class="section section--6"></section>
+        <section class="section section--7"></section>
+        <section class="section section--8"></section>
+        <section class="section section--9"></section>
+        <section class="section section--10"></section>
+        <section class="section section--11"></section>
+        <section class="section section--12"></section>
+        <section class="section section--13">
+            <div class="img_box">
+                <div class="link"><img src="assets/img/link.png" alt="link"></div>
+                <a class="insta" href="https://www.picuki.com/profile/luminous_art_cinema" target="_self"><img
+                        src="assets/img/s10-2.png" alt="insta"></a>
+                <a class="web" href="http://127.0.0.1:5501/" target="_self"><img src="assets/img/s10-3.png"
+                        alt="web"></a>
+            </div>
+        </section>
+    </section>
+    <section class="section-group section-group--4 section-group--horizontal-left">
+        <section class="section section--14"></section>
+        <section class="section section--15"></section>
+    </section>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+
+
+    <script>
+        // GSAP 및 ScrollTrigger 플러그인 활성화
+        gsap.registerPlugin(ScrollTrigger);
+
+
+        function SectionGroup__init() {
+            $(".section-group--horizontal-right").each(function (index, node) {
+                var $group = $(node);
+                var $section = $group.find("> .section");
+
+                gsap.to($section, {
+                    xPercent: 100 * ($section.length - 1),
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: $group,
+                        start: "top top",
+                        end: "+=" + ($section.length - 1) * 100 + "%",
+                        pin: true,
+                        scrub: true
+                    }
+                });
+            });
+
+            $(".section-group--horizontal-left").each(function (index, node) {
+                var $group = $(node);
+                var $section = $group.find("> .section");
+
+                gsap.to($section, {
+                    xPercent: -100 * ($section.length - 1),
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: $group,
+                        start: "top top",
+                        end: "+=" + ($section.length - 1) * 100 + "%",
+                        pin: true,
+                        scrub: true
+                    }
+                });
+            });
+
+            $(".section-group--stack-up").each(function (index, node) {
+                var $group = $(node);
+                var $section = $group.find("> .section:not(:first-child)");
+
+                $section.each(function (index, node) {
+                    var $sectionOne = $(node);
+
+                    gsap.to($sectionOne, {
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: $sectionOne,
+                            start: "top 100%",
+                            end: "bottom 100%",
+                            pin: $sectionOne.prev(),
+                            pinSpacing: false,
+                            scrub: true
+                        }
+                    });
+                });
+            });
+        }
+
+        SectionGroup__init();
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
